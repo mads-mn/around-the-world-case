@@ -1,0 +1,362 @@
+{
+  "countries": {
+    "AO": "Angola",
+    "BI": "Burundi",
+    "BJ": "Benin",
+    "BF": "Burkina Faso",
+    "BW": "Botswana",
+    "CF": "Central African Rep.",
+    "CI": "Côte d'Ivoire",
+    "CM": "Cameroon",
+    "CD": "Dem. Rep. Congo",
+    "CG": "Congo",
+    "DJ": "Djibouti",
+    "DZ": "Algeria",
+    "EG": "Egypt",
+    "ER": "Eritrea",
+    "ET": "Ethiopia",
+    "GA": "Gabon",
+    "GH": "Ghana",
+    "GN": "Guinea",
+    "GM": "Gambia",
+    "GW": "Guinea-Bissau",
+    "GQ": "Eq. Guinea",
+    "KE": "Kenya",
+    "LR": "Liberia",
+    "LY": "Libya",
+    "LS": "Lesotho",
+    "MA": "Morocco",
+    "MG": "Madagascar",
+    "ML": "Mali",
+    "MZ": "Mozambique",
+    "MR": "Mauritania",
+    "MW": "Malawi",
+    "NA": "Namibia",
+    "NE": "Niger",
+    "NG": "Nigeria",
+    "RW": "Rwanda",
+    "SD": "Sudan",
+    "SS": "S. Sudan",
+    "SN": "Senegal",
+    "SL": "Sierra Leone",
+    "SZ": "Swaziland",
+    "TD": "Chad",
+    "TG": "Togo",
+    "TN": "Tunisia",
+    "TZ": "Tanzania",
+    "UG": "Uganda",
+    "ZA": "South Africa",
+    "ZM": "Zambia",
+    "ZW": "Zimbabwe",
+    "SO": "Somalia"
+  },
+  "neighbors": {
+    "AO": [
+      "CD",
+      "CG",
+      "NA",
+      "ZM"
+    ],
+    "BF": [
+      "BJ",
+      "CI",
+      "GH",
+      "ML",
+      "NE",
+      "TG"
+    ],
+    "BI": [
+      "CD",
+      "RW",
+      "TZ"
+    ],
+    "BJ": [
+      "BF",
+      "NE",
+      "NG",
+      "TG"
+    ],
+    "BW": [
+      "NA",
+      "ZA",
+      "ZM",
+      "ZW"
+    ],
+    "CD": [
+      "AO",
+      "BI",
+      "CF",
+      "CG",
+      "RW",
+      "SS",
+      "TZ",
+      "UG",
+      "ZM"
+    ],
+    "CF": [
+      "CD",
+      "CG",
+      "CM",
+      "SD",
+      "SS",
+      "TD"
+    ],
+    "CG": [
+      "AO",
+      "CD",
+      "CF",
+      "CM",
+      "GA"
+    ],
+    "CI": [
+      "BF",
+      "GH",
+      "GN",
+      "LR",
+      "ML"
+    ],
+    "CM": [
+      "CF",
+      "CG",
+      "GA",
+      "GQ",
+      "NG",
+      "TD"
+    ],
+    "DJ": [
+      "ER",
+      "ET",
+      "SO"
+    ],
+    "DZ": [
+      "LY",
+      "MA",
+      "ML",
+      "MR",
+      "NE",
+      "TN"
+    ],
+    "EG": [
+      "LY",
+      "SD"
+    ],
+    "ER": [
+      "DJ",
+      "ET",
+      "SD"
+    ],
+    "ET": [
+      "DJ",
+      "ER",
+      "KE",
+      "SD",
+      "SO",
+      "SS"
+    ],
+    "GA": [
+      "CG",
+      "CM",
+      "GQ"
+    ],
+    "GH": [
+      "BF",
+      "CI",
+      "TG"
+    ],
+    "GM": [
+      "SN"
+    ],
+    "GN": [
+      "CI",
+      "GW",
+      "LR",
+      "ML",
+      "SL",
+      "SN"
+    ],
+    "GQ": [
+      "CM",
+      "GA"
+    ],
+    "GW": [
+      "GN",
+      "SN"
+    ],
+    "KE": [
+      "ET",
+      "SO",
+      "SS",
+      "TZ",
+      "UG"
+    ],
+    "LR": [
+      "CI",
+      "GN",
+      "SL"
+    ],
+    "LS": [
+      "ZA"
+    ],
+    "LY": [
+      "DZ",
+      "EG",
+      "NE",
+      "SD",
+      "TD",
+      "TN"
+    ],
+    "MA": [
+      "DZ"
+    ],
+    "MG": [],
+    "ML": [
+      "BF",
+      "CI",
+      "DZ",
+      "GN",
+      "MR",
+      "NE",
+      "SN"
+    ],
+    "MR": [
+      "DZ",
+      "ML",
+      "SN"
+    ],
+    "MW": [
+      "MZ",
+      "TZ",
+      "ZM"
+    ],
+    "MZ": [
+      "MW",
+      "SZ",
+      "TZ",
+      "ZA",
+      "ZM",
+      "ZW"
+    ],
+    "NA": [
+      "AO",
+      "BW",
+      "ZA",
+      "ZM"
+    ],
+    "NE": [
+      "BF",
+      "BJ",
+      "DZ",
+      "LY",
+      "ML",
+      "NG",
+      "TD"
+    ],
+    "NG": [
+      "BJ",
+      "CM",
+      "NE",
+      "TD"
+    ],
+    "RW": [
+      "BI",
+      "CD",
+      "TZ",
+      "UG"
+    ],
+    "SD": [
+      "CF",
+      "EG",
+      "ER",
+      "ET",
+      "LY",
+      "SS",
+      "TD"
+    ],
+    "SL": [
+      "GN",
+      "LR"
+    ],
+    "SN": [
+      "GM",
+      "GN",
+      "GW",
+      "ML",
+      "MR"
+    ],
+    "SO": [
+      "DJ",
+      "ET",
+      "KE"
+    ],
+    "SS": [
+      "CD",
+      "CF",
+      "ET",
+      "KE",
+      "SD",
+      "UG"
+    ],
+    "SZ": [
+      "MZ",
+      "ZA"
+    ],
+    "TD": [
+      "CF",
+      "CM",
+      "LY",
+      "NE",
+      "NG",
+      "SD"
+    ],
+    "TG": [
+      "BF",
+      "BJ",
+      "GH"
+    ],
+    "TN": [
+      "DZ",
+      "LY"
+    ],
+    "TZ": [
+      "BI",
+      "CD",
+      "KE",
+      "MW",
+      "MZ",
+      "RW",
+      "UG",
+      "ZM"
+    ],
+    "UG": [
+      "CD",
+      "KE",
+      "RW",
+      "SS",
+      "TZ"
+    ],
+    "ZA": [
+      "BW",
+      "LS",
+      "MZ",
+      "NA",
+      "SZ",
+      "ZW"
+    ],
+    "ZM": [
+      "AO",
+      "BW",
+      "CD",
+      "MW",
+      "MZ",
+      "NA",
+      "TZ",
+      "ZW"
+    ],
+    "ZW": [
+      "BW",
+      "MZ",
+      "ZA",
+      "ZM"
+    ]
+  }
+}
