@@ -1,7 +1,9 @@
 PShape africa;
 PShape africaOutline;
-PShape Angola, Burundi, Benin, BurkinaFaso, Botswana, CentralAfricanRep, IveryCoast, Cameroon, DemRepCongo, Congo, Djibouti, Algeria, Egypt, Eritrea, Ethiopia, Gabon, Ghana, Guinea, Gambia, GuineaBissau, EqGuinea, Kenya, Liberia, Libya, Lesotho, Morocco, Mali, Mozambique, Mauritania, Malawi, Namibia, Niger, Nigeria, Rwanda, WSahara, Sudan, SouthSudan, Senegal, SierraLeone, Swaziland, Chad, Togo, Tunisia, Tanzania, Uganda, SouthAfrica, Zambia, Zimbabwe, Somalia;
+PShape[] countries = new PShape[49];
 
+int x = 200;
+int y = 50;
 
 void setup() {
   size(900, 600);
@@ -10,9 +12,15 @@ void setup() {
   africa.scale(0.5);
   africaOutline.scale(0.5);
   loadCountries();
+  
+  shape(africaOutline, x, y);
+  for (int i = 0; i < countries.length; i++) {
+    countries[i].disableStyle();
+    fill(random(255), random(255), random(255));
+    shape(countries[i], x, y);
+  }
 }
 
 void draw() {
-  shape(africaOutline, 200, 100);
-  shape(Uganda, 200, 100);
+  
 }

@@ -1,51 +1,7 @@
-void loadCountries(){
-  Angola = africa.getChild("AO");
-  Burundi = africa.getChild("BI");
-  Benin = africa.getChild("BJ");
-  BurkinaFaso = africa.getChild("BF");
-  Botswana = africa.getChild("BW");
-  CentralAfricanRep = africa.getChild("CF");
-  IveryCoast = africa.getChild("CI");
-  Cameroon = africa.getChild("CM");
-  DemRepCongo = africa.getChild("CD");
-  Congo = africa.getChild("CG");
-  Djibouti = africa.getChild("DJ");
-  Algeria = africa.getChild("DZ");
-  Egypt = africa.getChild("EG");
-  Eritrea = africa.getChild("ER");
-  Ethiopia = africa.getChild("ET");
-  Gabon = africa.getChild("GA");
-  Ghana = africa.getChild("GH");
-  Guinea = africa.getChild("GN");
-  Gambia = africa.getChild("GM");
-  GuineaBissau = africa.getChild("GW");
-  EqGuinea = africa.getChild("GQ");
-  Kenya = africa.getChild("KE");
-  Liberia = africa.getChild("LR");
-  Libya = africa.getChild("LY");
-  Lesotho = africa.getChild("LS");
-  Morocco = africa.getChild("MA");
-  Mali = africa.getChild("ML");
-  Mozambique = africa.getChild("MZ");
-  Mauritania = africa.getChild("MR");
-  Malawi = africa.getChild("MW");
-  Namibia = africa.getChild("NA");
-  Niger = africa.getChild("NE");
-  Nigeria = africa.getChild("NG");
-  Rwanda = africa.getChild("RW");
-  WSahara = africa.getChild("EH");
-  Sudan = africa.getChild("SD");
-  SouthSudan = africa.getChild("SS");
-  Senegal = africa.getChild("SN");
-  SierraLeone = africa.getChild("SL");
-  Swaziland = africa.getChild("SZ");
-  Chad = africa.getChild("TD");
-  Togo = africa.getChild("TG");
-  Tunisia = africa.getChild("TN");
-  Tanzania = africa.getChild("TZ");
-  Uganda = africa.getChild("UG");
-  SouthAfrica = africa.getChild("ZA");
-  Zambia = africa.getChild("ZM");
-  Zimbabwe = africa.getChild("ZW");
-  Somalia = africa.getChild("SO");
+void loadCountries() {
+  for (int i = 0; i < countries.length; i++) {
+    countries[i] = africa.getChild(i);
+    
+    countries[i].scale(0.5);
+  }
 }
