@@ -3,5 +3,6 @@ void loadCountries() {
     countries[i] = africa.getChild(i);
     
     countries[i].scale(0.5);
+    countries[i].disableStyle();
   }
 }
