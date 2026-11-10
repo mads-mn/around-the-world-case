@@ -33,5 +33,9 @@ void setup() {
 }
 
 void draw() {
- 
+  // x, y, bredde, højde
+  drawPergament(20, 100, 200, 160);
+
+  drawPergament(20, 280, 200, 250);
+
 }
