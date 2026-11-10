@@ -24,8 +24,12 @@ void setup() {
   goalCountry = int(random(countries.length));
 
   image(background, 0, 0);
-  fill(#B29009);
+  fill(200, 180, 116);
+  stroke(115, 75, 38);
+  strokeWeight(5);
   shape(africaOutline, x, y);
+  stroke(0);
+  strokeWeight(3);
   fill(#408B0B);
   shape(countries[startCountry], x, y);
   fill(#831C09);
