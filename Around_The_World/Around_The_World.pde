@@ -2,7 +2,7 @@ PImage background;
 PShape africa;
 PShape africaOutline;
 PShape[] countries = new PShape[48];
-String[] countriesName = {
+String[] countryNames = {
   "Angola", "Burundi", "Benin", "Burkina Faso", "Botswana",
   "Central African Rep", "Côte d Ivoire", "Cameroon", "Democratic Rep Congo",
   "Congo", "Djibouti", "Algeria", "Egypt", "Eritrea", "Ethiopia",
@@ -77,7 +77,7 @@ void draw() {
   text("Startland:", 35, 135);
   text("Målland:", 35, 185);
   fill(#408B0B);
-  text(countriesName[startCountry-1], 35, 155);
+  text(countryNames[startCountry-1], 35, 155);
   fill(#831C09);
-  text(countriesName[goalCountry-1], 35, 205);
+  text(countryNames[goalCountry-1], 35, 205);
 }
