@@ -69,8 +69,13 @@ void setup() {
   // Vælg de første to lande
   chooseCountries();
 
-  //Tegner baggrunden & Afrikas outline
+  //Tegner baggrunden
   image(background, 0, 0);
+}
+
+void draw() {
+  
+  // Tegner Afrikas outline
   fill(200, 180, 116);
   stroke(115, 75, 38);
   strokeWeight(5);
@@ -83,9 +88,7 @@ void setup() {
   shape(countryOutlines[startCountry], x, y);
   fill(#831C09);
   shape(countryOutlines[goalCountry], x, y);
-}
-
-void draw() {
+  
   //Skriver titlen på spillet
   pushMatrix();
   rotate(radians(-12));
