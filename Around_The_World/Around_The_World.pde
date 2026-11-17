@@ -76,7 +76,6 @@ void setup() {
 }
 
 void draw() {
-  
   // Tegner Afrikas outline
   fill(200, 180, 116);
   stroke(115, 75, 38);
@@ -117,4 +116,6 @@ void draw() {
   text(countries.getString(countryIDs.get(startCountry)), 35, 155);
   fill(#831C09);
   text(countries.getString(countryIDs.get(goalCountry)), 35, 205);
+  
+  drawSearchBar(width-250, 20);
 }
