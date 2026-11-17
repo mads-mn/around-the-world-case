@@ -1,24 +1,40 @@
+import java.util.*;
+
 PImage background;
 PShape africa;
 PShape africaOutline;
-PShape[] countries = new PShape[48];
-String[] countryNames = {
-  "Angola", "Burundi", "Benin", "Burkina Faso", "Botswana",
-  "Central African Rep", "Côte d Ivoire", "Cameroon", "Democratic Rep Congo",
-  "Congo", "Djibouti", "Algeria", "Egypt", "Eritrea", "Ethiopia",
-  "Gabon", "Ghana", "Guinea", "Gambia", "Guinea Bissau",
-  "Equatorial Guinea", "Kenya", "Liberia", "Libya", "Lesotho", "Morocco",
-  "Mali", "Mozambique", "Mauritania", "Malawi",
-  "Namibia", "Niger", "Nigeria", "Rwanda", "Sudan", "South Sudan",
-  "Senegal", "Sierra Leone", "Swaziland", "Chad", "Togo",
-  "Tunisia", "Tanzania", "Uganda", "South Africa", "Zambia",
-  "Zimbabwe", "Somalia"
-};
+PShape[] countryOutlines = new PShape[48];
+
+// Afrikas koordinater
 int x = 200;
 int y = 50;
 
+// Landenes ID'er og navne
+ArrayList<String> countryIDs = new ArrayList<String>();
+
+// Hvert lands naboer gemmes som integers
+ArrayList<Integer>[] countryInts;
+
+// Start- og målland
 int startCountry;
 int goalCountry;
+
+// Antal grænser
+int borderAmount;
+int minBorders = 4;
+int maxBorders = 8;
+
+// JSON
+JSONObject data;
+JSONObject countries;
+JSONObject neighbors;
+
+// Alle mulige landekombinationer fordelt efter afstand
+ArrayList<int[]>[] pairsPerDistance;
+
+// Afstande, der rent faktisk har mulige landekombinationer
+ArrayList<Integer> possibleBorderAmounts = new ArrayList<Integer>();
+
 
 void setup() {
   size(900, 600);
@@ -31,11 +47,27 @@ void setup() {
   africa.scale(0.5);
   africaOutline.scale(0.5);
   africaOutline.disableStyle();
+  loadCountryOutlines();
+
+ /* //Vælger tilfældig land som start og mål
+  startCountry = int(random(countryOutlines.length));
+  goalCountry = int(random(countryOutlines.length));
+  */
+  
+  // Indlæs JSON
+  data = loadJSONObject("africaNeighbours.json");
+
+  countries = data.getJSONObject("countries");
+  neighbors = data.getJSONObject("neighbors");
+  
+  // Indlæs landene
   loadCountries();
 
-  //Vælger tilfældig land som start og mål
-  startCountry = int(random(countries.length));
-  goalCountry = int(random(countries.length));
+  // Find alle mulige kombinationer
+  findAllPossiblePairs();
+
+  // Vælg de første to lande
+  chooseCountries();
 
   //Tegner baggrunden & Afrikas outline
   image(background, 0, 0);
@@ -48,9 +80,9 @@ void setup() {
   stroke(0);
   strokeWeight(3);
   fill(#408B0B);
-  shape(countries[startCountry], x, y);
+  shape(countryOutlines[startCountry], x, y);
   fill(#831C09);
-  shape(countries[goalCountry], x, y);
+  shape(countryOutlines[goalCountry], x, y);
 }
 
 void draw() {
@@ -77,7 +109,7 @@ void draw() {
   text("Startland:", 35, 135);
   text("Målland:", 35, 185);
   fill(#408B0B);
-  text(countryNames[startCountry], 35, 155);
+  text(countries.getString(countryIDs.get(startCountry)), 35, 155);
   fill(#831C09);
-  text(countryNames[goalCountry], 35, 205);
+  text(countries.getString(countryIDs.get(goalCountry)), 35, 205);
 }
