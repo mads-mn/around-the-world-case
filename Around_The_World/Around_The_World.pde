@@ -15,6 +15,9 @@ ArrayList<String> countryIDs = new ArrayList<String>();
 // Hvert lands naboer gemmes som integers
 ArrayList<Integer>[] countryInts;
 
+// Søgte lande
+ArrayList<Integer> searchedCountryIndexes = new ArrayList<Integer>();
+
 // Start- og målland
 int startCountry;
 int goalCountry;
@@ -89,6 +92,12 @@ void draw() {
   shape(countryOutlines[startCountry], x, y);
   fill(#831C09);
   shape(countryOutlines[goalCountry], x, y);
+  
+  // Tegner søgte lande
+  fill(#AAAA02);
+  for (int i = 0; i < searchedCountryIndexes.size(); i++) {
+    shape(countryOutlines[searchedCountryIndexes.get(i)], x, y);
+  }
   
   //Skriver titlen på spillet
   pushMatrix();
