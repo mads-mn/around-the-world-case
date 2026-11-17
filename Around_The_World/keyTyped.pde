@@ -10,4 +10,13 @@ void keyTyped() {
     search += key;
   }
   println(search);
+  //Undersøger om vi har trykket slet, hvis man har det, så undersøger den om tekststrengen er større end 0, hvis den er det, så overskriver den search med en ny kortere version af sig selv (-1)
+  if(key == BACKSPACE){
+   if(search.length() > 0){
+    search = search.substring(0, search.length() - 1); 
+   }
+  } else {
+    //Search bliver erstatte med sig selv + tasten man har trykket.
+  search += key;
+  }
 }

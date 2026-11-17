@@ -4,7 +4,7 @@ void drawPergament(float x, float y, float w, float h) {
   translate(x, y);
   scale(w / 300.0, h / 180.0);
 
-  // Skygge
+  // Tegner skyggen
   noStroke();
   fill(50, 30, 15, 100);
   beginShape();
@@ -19,11 +19,12 @@ void drawPergament(float x, float y, float w, float h) {
   bezierVertex(8, 45, 0, 25, 8, 12);
   endShape(CLOSE);
 
-  // Selve papiret
+  // Farver/værdier til papir
   fill(235, 205, 151);
   stroke(115, 75, 38);
   strokeWeight(2.5);
 
+  // Tegner papir
   beginShape();
   vertex(8, 7);
   bezierVertex(40, 0, 70, 8, 105, 4);

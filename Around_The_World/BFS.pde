@@ -1,5 +1,6 @@
 int findDistance(int start, int end) {
 
+  //Laver en ny kø
   Queue<Integer> queue = new LinkedList<Integer>();
 
   int[] distance = new int[countryInts.length];
@@ -18,6 +19,7 @@ int findDistance(int start, int end) {
       return distance[now];
     }
 
+  
     for (int neighbor : countryInts[now]) {
 
       if (distance[neighbor] == -1) {
