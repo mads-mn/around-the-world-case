@@ -36,7 +36,7 @@ ArrayList<int[]>[] pairsPerDistance;
 ArrayList<Integer> possibleBorderAmounts = new ArrayList<Integer>();
 
 // String til det land der søges på:
-String search;
+String search = "";
 
 void setup() {
   size(900, 600);
