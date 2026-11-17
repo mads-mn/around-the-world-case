@@ -2,14 +2,11 @@ void loadCountries() {
 
   // Hent alle landenes ID'er
   for (Object id : countries.keys()) {
-    println(id);
     countryIDs.add((String) id);
   }
 
   // Sorter alfabetisk, så indexene er stabile
   Collections.sort(countryIDs);
-  
-  printArray(countryIDs);
 
   // Opret array med en naboliste til hvert land
   countryInts = new ArrayList[countryIDs.size()];
