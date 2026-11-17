@@ -77,7 +77,7 @@ void draw() {
   text("Startland:", 35, 135);
   text("Målland:", 35, 185);
   fill(#408B0B);
-  text(countryNames[startCountry-1], 35, 155);
+  text(countryNames[startCountry], 35, 155);
   fill(#831C09);
-  text(countryNames[goalCountry-1], 35, 205);
+  text(countryNames[goalCountry], 35, 205);
 }
