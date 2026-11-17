@@ -35,6 +35,9 @@ ArrayList<int[]>[] pairsPerDistance;
 // Afstande, der rent faktisk har mulige landekombinationer
 ArrayList<Integer> possibleBorderAmounts = new ArrayList<Integer>();
 
+// Land der søges på:
+String search;
+
 
 void setup() {
   size(900, 600);
