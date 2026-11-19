@@ -105,10 +105,10 @@ void draw() {
   textSize(36);
   //Skyggen
   fill(60, 40, 20);
-  text("Sultne Grænser", -3, 86);
+  text("Tørstige Grænser", -3, 88);
   //Selve titlen
   fill(#F4C542);
-  text("Sultne Grænser", 0, 90);
+  text("Tørstige Grænser", 0, 90);
 
   popMatrix();
 
