@@ -10,10 +10,10 @@ void addSearchedCountryIndex() {
       search = "";
       // I denne løkke køres igennem listen med allerede gemte lande
       for (int j = 0; j < searchedCountryIndexes.size(); j++) {
-        
+
         // Her tjekkes der om landet der blev søgt på allerede er søgt på tidligere
-        if (search.equalsIgnoreCase(countries.getString(countryIDs.get(searchedCountryIndexes.get(j))))) {
-          
+        if (i == searchedCountryIndexes.get(j)) {
+
           // Hvis dette er tilfældet, afsluttes funktionen uden at gemme indexet for det søgte land
           return;
         }
