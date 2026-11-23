@@ -5,6 +5,10 @@ void drawGameScreen() {
   strokeWeight(5);
   shape(africaOutline, x, y);
 
+  //Tegner pergament
+  drawPergament(20, 100, 200, 160);
+  drawPergament(20, 280, 200, 250);
+  
   //Tegner startland og målland
   stroke(0);
   strokeWeight(3);
@@ -14,9 +18,12 @@ void drawGameScreen() {
   shape(countryOutlines[goalCountry], x, y);
   
   // Tegner søgte lande
-  fill(#AAAA02);
   for (int i = 0; i < searchedCountryIndexes.size(); i++) {
+    fill(#AAAA02);
     shape(countryOutlines[searchedCountryIndexes.get(i)], x, y);
+    fill(0);
+    //Skriver ruten
+    text(countries.getString(countryIDs.get(searchedCountryIndexes.get(i))), 35, 320+i*25);
   }
   
   //Skriver titlen på spillet
@@ -32,9 +39,6 @@ void drawGameScreen() {
 
   popMatrix();
 
-  //Tegner pergament
-  drawPergament(20, 100, 200, 160);
-  drawPergament(20, 280, 200, 250);
 
   //Skriver startland og målland
   fill(0);
