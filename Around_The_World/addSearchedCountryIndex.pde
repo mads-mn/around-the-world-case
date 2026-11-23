@@ -7,7 +7,7 @@ void addSearchedCountryIndex() {
 
     // Her tjekkes om landets navn er det samme som ordet der er skrevet i søgefeltet
     if (search.equalsIgnoreCase(countryName)) {
-
+      search = "";
       // I denne løkke køres igennem listen med allerede gemte lande
       for (int j = 0; j < searchedCountryIndexes.size(); j++) {
         
