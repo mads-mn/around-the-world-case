@@ -4,7 +4,6 @@ PImage background;
 PShape africa;
 PShape africaOutline;
 PShape[] countryOutlines = new PShape[48];
-int movingCloudAmount = 10;
 
 // Afrikas koordinater
 int x = 200;
@@ -18,9 +17,6 @@ ArrayList<Integer>[] countryInts;
 
 // Søgte lande
 ArrayList<Integer> searchedCountryIndexes = new ArrayList<Integer>();
-
-//Moving cloud array
-movingCloud[] mClouds = new movingCloud[movingCloudAmount];
 
 // Start- og målland
 int startCountry;
@@ -58,17 +54,17 @@ void setup() {
   africaOutline.disableStyle();
   loadCountryOutlines();
 
-  /* //Vælger tilfældig land som start og mål
-   startCountry = int(random(countryOutlines.length));
-   goalCountry = int(random(countryOutlines.length));
-   */
-
+ /* //Vælger tilfældig land som start og mål
+  startCountry = int(random(countryOutlines.length));
+  goalCountry = int(random(countryOutlines.length));
+  */
+  
   // Indlæs JSON
   data = loadJSONObject("africaNeighbours.json");
 
   countries = data.getJSONObject("countries");
   neighbors = data.getJSONObject("neighbors");
-
+  
   // Indlæs landene
   loadCountries();
 
@@ -78,22 +74,11 @@ void setup() {
   // Vælg de første to lande
   chooseCountries();
 
-
-  //Opretter bevægende skyer
-  for (int i = 0; i < movingCloudAmount; i++) {
-    mClouds[i] = new movingCloud(); //Opretter ny sky
-  }
+  //Tegner baggrunden
+  image(background, 0, 0);
 }
 
 void draw() {
-  //Tegner baggrunden
-  image(background, 0, 0);
-  //Opdaterer bevægende skyer
-  for (int i = 0; i < movingCloudAmount; i++) {
-    noStroke();
-    mClouds[i].update();
-    mClouds[i].display();
-  }
   // Tegner alt det der ses på skærmen
   drawGameScreen();
 }
