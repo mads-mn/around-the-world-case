@@ -40,6 +40,7 @@ ArrayList<Integer> possibleBorderAmounts = new ArrayList<Integer>();
 
 // String til det land der søges på:
 String search = "";
+int waterBottles;
 
 void setup() {
   size(900, 600);

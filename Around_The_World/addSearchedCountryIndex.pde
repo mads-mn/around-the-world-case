@@ -21,6 +21,7 @@ void addSearchedCountryIndex() {
 
       // Gem indexet til listen med lande der er søgt på
       searchedCountryIndexes.add(i);
+      waterBottles--;
     }
   }
 }

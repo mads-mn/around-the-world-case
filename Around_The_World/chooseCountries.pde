@@ -21,6 +21,7 @@ void chooseCountries() {
   // Gem startland og målland
   startCountry = chosenPair[0];
   goalCountry = chosenPair[1];
+  waterBottles = borderAmount + 2;
 
   // Vis resultatet i konsollen
   println("--------------------------");
