@@ -2,10 +2,12 @@ import java.util.*;
 
 PImage background;
 PImage deathScreen;
+
 PShape africa;
 PShape africaOutline;
 PShape[] countryOutlines = new PShape[48];
 
+PFont deathFont;
 
 // Afrikas koordinater
 int x = 200;
@@ -47,6 +49,9 @@ boolean gameActive = true;
 
 void setup() {
   size(900, 600);
+
+  deathFont = createFont("DeathRock.ttf", 40);
+
   //Opretter svg filerne som shapes
   background = loadImage("savannaBackground.png");
   deathScreen = loadImage("savannaBackgroundSH.png");
@@ -85,11 +90,29 @@ void setup() {
 }
 
 void draw() {
+  if(waterBottles < 1){
+   gameActive = false; 
+  }
+  
   if (gameActive == true) {
     // Tegner alt det der ses på skærmen
     drawGameScreen();
+  } else {
+    image(deathScreen, 0, 0);
+
+    pushStyle();
+    textFont(deathFont);
+    textSize(100);
+    fill(#E0E0E0);
+    textAlign(CENTER, CENTER);
+    text("Du døde af tørst", width/2, height/2-200);
+    popStyle();
+
+    pushStyle();
+    textSize(20);
+    fill(#E0E0E0);
+    textAlign(CENTER, CENTER);
+    text("Klik på R for at starte et nyt spil", width/2, height/2-100);
+    popStyle();
   }
-  image(deathScreen, 0, 0);
-  textFont(fontDeath);
-  text("Du døde af tørst", width/2-100, height/2);
 }
