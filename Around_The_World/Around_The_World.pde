@@ -1,9 +1,11 @@
 import java.util.*;
 
 PImage background;
+PImage deathScreen;
 PShape africa;
 PShape africaOutline;
 PShape[] countryOutlines = new PShape[48];
+
 
 // Afrikas koordinater
 int x = 200;
@@ -41,31 +43,34 @@ ArrayList<Integer> possibleBorderAmounts = new ArrayList<Integer>();
 // String til det land der søges på:
 String search = "";
 int waterBottles;
+boolean gameActive = true;
 
 void setup() {
   size(900, 600);
   //Opretter svg filerne som shapes
   background = loadImage("savannaBackground.png");
+  deathScreen = loadImage("savannaBackgroundSH.png");
   africa = loadShape("africa.svg");
   africaOutline = loadShape("africaOutline.svg");
   //Resizer og skalerer shapes & images
   background.resize(width, height);
+  deathScreen.resize(width, height);
   africa.scale(0.5);
   africaOutline.scale(0.5);
   africaOutline.disableStyle();
   loadCountryOutlines();
 
- /* //Vælger tilfældig land som start og mål
-  startCountry = int(random(countryOutlines.length));
-  goalCountry = int(random(countryOutlines.length));
-  */
-  
+  /* //Vælger tilfældig land som start og mål
+   startCountry = int(random(countryOutlines.length));
+   goalCountry = int(random(countryOutlines.length));
+   */
+
   // Indlæs JSON
   data = loadJSONObject("africaNeighbours.json");
 
   countries = data.getJSONObject("countries");
   neighbors = data.getJSONObject("neighbors");
-  
+
   // Indlæs landene
   loadCountries();
 
@@ -80,6 +85,11 @@ void setup() {
 }
 
 void draw() {
-  // Tegner alt det der ses på skærmen
-  drawGameScreen();
+  if (gameActive == true) {
+    // Tegner alt det der ses på skærmen
+    drawGameScreen();
+  }
+  image(deathScreen, 0, 0);
+  textFont(fontDeath);
+  text("Du døde af tørst", width/2-100, height/2);
 }

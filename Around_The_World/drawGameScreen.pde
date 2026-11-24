@@ -17,6 +17,10 @@ void drawGameScreen() {
     drawWaterBottle((width - 220) + i*35, 147, 25, 50);
   }
   }
+  if(waterBottles <= 1){
+   gameActive = false; 
+  }
+  
 
   //Tegner startland og målland
   stroke(0);
