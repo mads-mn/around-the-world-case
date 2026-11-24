@@ -112,7 +112,7 @@ void draw() {
     textSize(20);
     fill(#E0E0E0);
     textAlign(CENTER, CENTER);
-    text("Klik på R for at starte et nyt spil", width/2, height/2-100);
+    text("Klik på skærmen for at starte et nyt spil", width/2, height/2-100);
     popStyle();
   }
 }

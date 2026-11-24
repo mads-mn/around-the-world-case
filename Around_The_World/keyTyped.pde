@@ -8,9 +8,17 @@ void keyTyped() {
   // Hvis der trykkes enter, køres funktionen der tjekker om der blev søgt på et nyt land
   else if (key == ENTER) {
     addSearchedCountryIndex();
-  } 
+  }
   // Hvis der bliver trykket på noget anden end backspace og enter, tilføjes karakteren til search
   else {
     search += key;
+  }
+}
+
+void mousePressed() {
+  if (!gameActive){
+    image(background, 0, 0);
+    gameActive = true;
+    chooseCountries();
   }
 }
